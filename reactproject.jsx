@@ -5,10 +5,6 @@ import {
   Lock, X, CheckCircle2, Loader2, Terminal
 } from "lucide-react";
 
-/* ------------------------------------------------------------------ */
-/* Design tokens: dev-console theme.                                   */
-/* Charcoal surfaces, cyan + amber dual accent, three-role type system */
-/* ------------------------------------------------------------------ */
 
 const FULL_NAME = "Puneeth Kumar Penke";
 const ROLE_LINE = "Full-Stack Developer";
@@ -160,14 +156,14 @@ function useTypedLines(lines, speed = 32, pause = 1400) {
   return text;
 }
 
-/* ------------------------------------------------------------------ */
+
 
 export default function Portfolio() {
   const typed = useTypedLines(TYPED_STRINGS);
 
-  // ---- contact form + storage-backed "database" ----
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("idle"); // idle | saving | done | error
+  const [status, setStatus] = useState("idle"); 
 
   const submit = async (e) => {
     e.preventDefault();
@@ -187,7 +183,7 @@ export default function Portfolio() {
     }
   };
 
-  // ---- lightweight admin panel to read stored messages ----
+ 
   const [adminOpen, setAdminOpen] = useState(false);
   const [pass, setPass] = useState("");
   const [authed, setAuthed] = useState(false);
