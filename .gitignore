@@ -1,0 +1,5 @@
+# Ignore nested personal and external project folders
+my-portfolio/
+oracleJdk-26/
+portfolio/
+src/
