@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 
 
-const FULL_NAME = "Puneeth Kumar Penke";
+const FULL_NAME = "Puneeth Kumar";
 const ROLE_LINE = "Full-Stack Developer";
 const TYPED_STRINGS = [
   "const dev = { stack: 'React · Node · Python' };",
