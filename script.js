@@ -1,25 +1,23 @@
+const menuBtn = document.querySelector('.menu-btn');
+const navbar = document.querySelector('.navbar');
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => navbar.classList.toggle('open'));
+  document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => navbar.classList.remove('open')));
+}
 
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileMenu.classList.toggle('toggle');
-});
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-});
-
-
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for reaching out, Puneeth! Your simulated message submission was successful.');
-    contactForm.reset();
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth'});
+    }
+  });
 });

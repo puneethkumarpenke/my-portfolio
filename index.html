@@ -1,179 +1,239 @@
 <!DOCTYPE html>
-<html>
-
-<head> <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
- </head>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Puneeth Kumar Penke — Full Stack Developer Portfolio">
+  <title>Puneeth Kumar Penke | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Puneeth<span class="highlight">.dev</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+  <div class="noise"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#home"><span>PK</span><b>Puneeth Kumar</b></a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <header class="hero col-12 mt-50 pt-50" id="home">
-        <div class="hero-content col-12 mt-50 pt-50">
-            <h3 class="mt-30 pt-30">Hi, I am</h3>
-            <h1>Puneeth Kumar</h1>
-            <h2>Full-Stack Developer</h2>
-            <p>Computer Science Engineering student (Graduating 2026) specializing in building high-performance web applications with React.js, Node.js, and Python.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View My Work</a>
-                <a href="#contact" class="btn secondary-btn">Let's Talk</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://github.com/puneethkumarpenke" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/puneeth-kumar2004" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:puneethpenke015@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </header>
-    <section class="about" id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p>I am a motivated Computer Science Engineering student driven by a passion for clean code, fast iteration, and measurable outcomes. With hands-on experience spanning frontend frameworks and backend REST APIs, I love bridging the gap between robust server-side logic and pixel-perfect user interfaces.</p>
-                <blockquote>
-                    "Eager to contribute to product teams that value performance, scalability, and exceptional user experiences."
-                </blockquote>
-            </div>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Frontend</h3>
-                <ul>
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js & Next.js</li>
-                    <li>Bootstrap & Flexbox</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-server"></i> Backend & DB</h3>
-                <ul>
-                    <li>Node.js & Express</li>
-                    <li>Python (Flask, FastAPI)</li>
-                    <li>RESTful APIs</li>
-                    <li>MongoDB & SQLite</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Tools & Others</h3>
-                <ul>
-                    <li>C++ & Java</li>
-                    <li>Git & GitHub</li>
-                    <li>Linux Environments</li>
-                    <li>Machine Learning Basics</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">Python • FastAPI • ML</span>
-                    <h3>Explainability-Driven Anaemia Prediction System</h3>
-                    <p>Built a healthcare prediction REST API achieving 89% accuracy across 3 ML models on 1,200+ patient records. Reduced false-negatives by 15% via custom trust scoring.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/puneethkumarpenke/ED_APP" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">JS • LocalStorage • Bootstrap</span>
-                    <h3>Dynamic Todos Application</h3>
-                    <p>Developed a task management web app supporting full CRUD operations without page reloads. Implemented localStorage for 100% data retention across sessions.</p>
-                    <div class="project-links">
-                        <a href="https://puneethproject.ccbp.tech" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">HTML5 • CSS3 • Bootstrap</span>
-                    <h3>E-Commerce Product Showcase</h3>
-                    <p>Built a responsive product showcase website featuring category filters, video embeds, and a multi-image carousel structured with semantic HTML5 grid layouts.</p>
-                    <div class="project-links">
-                        <a href="https://puneethproject1.ccbp.tech" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">Flexbox • Responsive Web Design</span>
-                    <h3>Tourism Travel Guide</h3>
-                    <p>Created a comprehensive travel guide covering 10+ destinations with adaptive layouts and embedded virtual tours, drastically optimizing mobile bounce rates.</p>
-                    <div class="project-links">
-                        <a href="https://puneethproject2.ccbp.tech" target="_blank" class="proj-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
+    <a class="nav-cta" href="mailto:punethpenke015@gmail.com">Let's Talk ↗</a>
+  </header>
 
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> AVAILABLE FOR OPPORTUNITIES</div>
+        <h1>Building digital<br><em>experiences</em> that work.</h1>
+        <p class="hero-text">I'm <strong>Puneeth Kumar Penke</strong>, a Full Stack Developer focused on modern web applications, REST APIs, databases, and practical AI-powered solutions.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View My Work <span>↗</span></a>
+          <a class="btn ghost" href="mailto:punethpenke015@gmail.com">Contact Me</a>
         </div>
-    </section>
-    <section class="education" id="education">
-        <h2 class="section-title">Education & Milestones</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-date">2022 - 2026</span>
-                <h3>B.Tech in Computer Science Engineering</h3>
-                <h4>QIS College of Engineering and Technology, Ongole</h4>
-                <p>Current CGPA: <strong>7.4</strong></p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-date">Apr 2023 - Ongoing</span>
-                <h3>Full-Stack Development Certification</h3>
-                <h4>Nxtwave Disruptive Technologies</h4>
-                <p>Industry-ready continuous intensive training path for modern development stacks.</p>
-            </div>
-            <div class="timeline-item">
-                <span class="timeline-date">2025</span>
-                <h3>National Level Project Expo Participant</h3>
-                <h4>QISFEST</h4>
-                <p>Presented core technical solutions to a panel of industry experts among 50+ regional teams.</p>
-            </div>
+        <div class="quick-stats">
+          <div><strong>2026</strong><small>B.Tech CSE</small></div>
+          <div><strong>LVC</strong><small>Developer Intern</small></div>
+          <div><strong>AI</strong><small>GenAI Enthusiast</small></div>
         </div>
-    </section>
-    <section class="contact" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Ongole, Andhra Pradesh, India</p>
-                <p><i class="fas fa-envelope"></i> puneethpenke015@gmail.com</p>
-                <p><i class="fas fa-phone-alt"></i> +91 7013858252</p>
-            </div>
-            <form id="contact-form" class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn primary-btn">Send Message</button>
-            </form>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="code-card">
+          <div class="window-bar"><i></i><i></i><i></i><span>portfolio.js</span></div>
+          <pre><code><b>const</b> developer = {
+  name: <s>"Puneeth Kumar"</s>,
+  role: <s>"Full Stack Developer"</s>,
+  stack: [
+    <s>"React"</s>, <s>"Node.js"</s>,
+    <s>"Next.js"</s>, <s>"FastAPI"</s>
+  ],
+  mindset: <s>"Build • Learn • Ship"</s>
+};</code></pre>
+          <div class="code-glow"></div>
         </div>
+        <div class="floating-card fc-one">⚡ Full Stack</div>
+        <div class="floating-card fc-two">✦ GenAI</div>
+        <div class="floating-card fc-three">◈ REST APIs</div>
+      </div>
     </section>
-    <footer class="footer">
-        <p>&copy; 2026 Puneeth Kumar Penke. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <section id="about" class="section about">
+      <div class="section-label">01 — ABOUT</div>
+      <div class="about-grid">
+        <div>
+          <h2>Turning ideas into<br><span>working products.</span></h2>
+        </div>
+        <div>
+          <p class="lead">Computer Science Engineering graduate with hands-on experience across the full web stack — programming, REST APIs, databases, and cloud fundamentals.</p>
+          <p>At LVC Solutions, I contribute to full-stack application development, API integration, database operations, debugging, performance improvements, and deployment workflows. I enjoy solving practical problems and continuously learning new technologies, especially Generative AI.</p>
+          <div class="about-tags">
+            <span>Problem Solver</span><span>API Builder</span><span>Database Curious</span><span>Fast Learner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-label">02 — EXPERIENCE</div>
+      <div class="experience-card reveal">
+        <div class="timeline-dot"></div>
+        <div class="experience-head">
+          <div>
+            <p class="muted">JUL 2026 — PRESENT</p>
+            <h3>Full Stack Developer Intern</h3>
+            <p class="company">LVC Solutions</p>
+          </div>
+          <span class="pill">Internship</span>
+        </div>
+        <div class="experience-body">
+          <ul>
+            <li>Contributed to full-stack web application development using HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, and AngularJS.</li>
+            <li>Developed responsive user interfaces and integrated frontend components with backend APIs and databases.</li>
+            <li>Used Git and GitHub for version control and team-based development workflows.</li>
+            <li>Assisted with database design, CRUD operations, API integration, debugging, performance optimization, and Vercel deployments.</li>
+          </ul>
+          <div class="tech-row"><span>React.js</span><span>Next.js</span><span>Node.js</span><span>AngularJS</span><span>GitHub</span><span>Vercel</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="section-label">03 — FEATURED PROJECTS</div>
+      <div class="section-intro">
+        <h2>Things I've <span>built.</span></h2>
+        <p>Selected projects combining development, automation, data, and practical problem solving.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-number">01</div>
+          <div class="project-icon">🧠</div>
+          <p class="project-type">MACHINE LEARNING · HEALTHCARE</p>
+          <h3>Explainability-Driven Anaemia Prediction System</h3>
+          <p>Healthcare prediction REST API using Logistic Regression, Random Forest, and XGBoost across 1,200+ patient records, with an emphasis on transparent model reasoning.</p>
+          <div class="project-stack"><span>Python</span><span>FastAPI</span><span>Flask</span><span>ML</span></div>
+          <a class="project-link" href="mailto:punethpenke015@gmail.com?subject=Anaemia%20Prediction%20Project">Discuss project ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-icon">₿</div>
+          <p class="project-type">FULL STACK · FINTECH</p>
+          <h3>CryptoPulse</h3>
+          <p>Full-stack cryptocurrency tracker for monitoring live prices, watchlists, portfolios, and transactions.</p>
+          <div class="project-stack"><span>React</span><span>Node.js</span><span>Next.js</span><span>MongoDB</span><span>Redux</span></div>
+          <a class="project-link" href="mailto:punethpenke015@gmail.com?subject=CryptoPulse%20Project">Discuss project ↗</a>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-icon">⚙</div>
+          <p class="project-type">AUTOMATION · DEVOPS</p>
+          <h3>Enterprise Test Automation Framework</h3>
+          <p>Scalable web test automation framework built around Java, Spring Boot, Selenium, and CI/CD pipelines.</p>
+          <div class="project-stack"><span>Java</span><span>Spring Boot</span><span>Selenium</span><span>CI/CD</span></div>
+          <a class="project-link" href="mailto:punethpenke015@gmail.com?subject=Test%20Automation%20Project">Discuss project ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="section-label">04 — TECH STACK</div>
+      <div class="skills-grid">
+        <div class="skill-column reveal">
+          <span class="skill-index">01</span><h3>Languages</h3>
+          <div class="chips"><span>Python</span><span>Java</span><span>C++</span><span>C#</span><span>C</span><span>JavaScript</span><span>Go</span><span>.NET</span><span>PHP</span></div>
+        </div>
+        <div class="skill-column reveal">
+          <span class="skill-index">02</span><h3>Frontend</h3>
+          <div class="chips"><span>React.js</span><span>Next.js</span><span>Vue.js</span><span>Angular.js</span><span>Tailwind</span><span>Bootstrap</span><span>TypeScript</span></div>
+        </div>
+        <div class="skill-column reveal">
+          <span class="skill-index">03</span><h3>Backend & APIs</h3>
+          <div class="chips"><span>Node.js</span><span>Express</span><span>Django</span><span>Flask</span><span>FastAPI</span><span>REST APIs</span></div>
+        </div>
+        <div class="skill-column reveal">
+          <span class="skill-index">04</span><h3>Data & DevOps</h3>
+          <div class="chips"><span>MongoDB</span><span>MySQL</span><span>PostgreSQL</span><span>Firebase</span><span>SQLite</span><span>Git/GitHub</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>AWS</span><span>CI/CD</span><span>Microservices</span></div>
+        </div>
+        <div class="skill-column reveal">
+          <span class="skill-index">05</span><h3>Concepts</h3>
+          <div class="chips"><span>System Design</span><span>DSA</span><span>LLMs / Gen AI</span><span>Debugging</span><span>CRUD</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <div class="section-label">05 — EDUCATION & TRAINING</div>
+      <div class="education-grid">
+        <div class="edu-card reveal">
+          <span class="edu-year">2022 — 2026</span>
+          <h3>B.Tech, Computer Science</h3>
+          <p>QIS College of Engineering & Technology, Ongole</p>
+          <strong>CGPA 7.5</strong>
+        </div>
+        <div class="edu-card reveal">
+          <span class="edu-year">2020 — 2022</span>
+          <h3>Intermediate (MPC)</h3>
+          <p>Narayana Junior College, Ongole</p>
+          <strong>84.0%</strong>
+        </div>
+        <div class="edu-card reveal">
+          <span class="edu-year">2019 — 2020</span>
+          <h3>SSC</h3>
+          <p>Andhra High School, Ongole</p>
+          <strong>97.0%</strong>
+        </div>
+      </div>
+      <div class="training">
+        <h3>Certifications & Training</h3>
+        <div class="training-list">
+          <div><span>✦</span> Web Full Stack Developer & Python Full Stack Developer Virtual Internship — EduSkills Foundation</div>
+          <div><span>✦</span> Cloud Computing Certification — Geonixa (AWS CloudWatch, Prometheus, Grafana, Auto Scaling, SNMP, IaC)</div>
+          <div><span>✦</span> Problem Solving Skill Certificate — HackerRank (Python Intermediate)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section achievements">
+      <div class="section-label">06 — HIGHLIGHTS</div>
+      <div class="highlight-grid">
+        <div class="highlight"><b>QISFEST 2025</b><span>National Level Project Expo Participant</span><p>Presented to industry experts and faculty judges among 50+ teams.</p></div>
+        <div class="highlight"><b>BUILD · LEARN · SHIP</b><span>Development mindset</span><p>Strong analytical and problem-solving skills with quick adaptability to new technologies.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-box">
+        <div class="section-label">07 — CONTACT</div>
+        <h2>Let's build something<br><em>useful.</em></h2>
+        <p>I'm open to software development opportunities, internships, projects, and conversations about technology.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:punethpenke015@gmail.com">Email Me ↗</a>
+          <a class="btn ghost" href="https://github.com/puneethkumarpenke" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn ghost" href="https://linkedin.com/in/puneeth-kumar2004" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <div class="contact-details">
+          <span>✉ punethpenke015@gmail.com</span>
+          <span>⌖ Ongole, Andhra Pradesh</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Puneeth Kumar Penke</span>
+    <span>Designed & built with HTML · CSS · JavaScript</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
